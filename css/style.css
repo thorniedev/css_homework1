@@ -8,6 +8,7 @@
     --card-border: #e5e5e5;
     --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     --radius: 14px;
+  
 }
 
 * {
@@ -16,7 +17,7 @@
 
 body {
     margin: 0;
-    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: "Inter", "Moulpali", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: #111;
     background: #fff;
 }
@@ -27,12 +28,11 @@ body {
     padding: 24px 16px 40px;
 }
 
-/* Optional helpers if you want Khmer text somewhere */
 .km {
     font-family: "Moulpali", serif;
 }
 
-/* Navbar + footer boxes like the screenshot */
+/* Header */
 .site-header {
     padding: 20px 0 18px;
     background-color: rgb(9, 32, 160);
@@ -46,7 +46,7 @@ body {
   align-items: center;
   gap: 14px;
 
-  /* ✅ FIX: allow dropdown (.nav-links position:absolute) to anchor correctly */
+
   position: relative;
 }
 
@@ -66,7 +66,7 @@ body {
   justify-content:flex-end;
 }
 
-/* menu links style (exclude logo link) */
+
 .nav-links a {
   text-decoration: none;
   font-size: 18px;
@@ -440,7 +440,7 @@ body {
   }
 }
 
-/* ✅ Tablet & Mobile */
+/* Tablet & Mobile */
 @media (max-width: 768px) {
   .site-header {
     position: relative; /* required for dropdown positioning */
@@ -457,7 +457,7 @@ body {
     align-items: flex-end;
   }
 
-  /* ✅ FIX: hide menu links on mobile by default (override desktop flex) */
+  /* hide nav links */
   .nav-links {
     position: absolute;
     left: 0;
