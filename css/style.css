@@ -12,6 +12,7 @@
   /* bg family */
   --tw-bg-opacity: 1;
   --bg-color: rgb(37 60 149 / var(--tw-bg-opacity));
+  --nav-color: rgb(234 179 8 / var(--tw-text-opacity));
 
   --txt-transform: uppercase;
   --margin-left-logo: -20px;
@@ -70,18 +71,17 @@ body {
   flex: 1;
   justify-content: flex-end;
 }
-
-
+/*
 .nav-links a {
-  text-decoration: none;
-  font-size: 18px;
+   text-decoration: none;
+  font-size: 6px;
   font-weight: 700;
   color: #fff;
   padding: 10px 10px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-}
+} */
 
 .nav-logo-link {
   padding: 2px 0px 5px 0px;
@@ -90,8 +90,8 @@ body {
 .nav-wrap a:not(.nav-logo-link) {
   text-decoration: none;
   padding: 14px 16px;
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
   color: #fff;
   transition: color 0.3s, transform 0.3s;
 }
