@@ -63,7 +63,7 @@ body {
   align-items: center;
   gap: 18px;
   flex: 1;
-  justify-content: center;
+  justify-content:flex-end;
 }
 
 /* menu links style (exclude logo link) */
@@ -76,10 +76,6 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-}
-
-.nav-links a:hover {
-  color: #bd8be9;
 }
 
 .nav-logo-link{
@@ -98,9 +94,7 @@ body {
 .nav-wrap a:not(.nav-logo-link):hover {
     color: #bd8be9;
     cursor: pointer;
-    margin-top: 5px;
-    font-size: 25px;
-    transform: translateY(-5px) scale(1.1);
+    /* margin-top: 5px; */
 }
 
 .nav-toggle {
