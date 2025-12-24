@@ -1,4 +1,4 @@
-console.log("main.js loaded ✅"); // testing 
+console.log("main.js loaded ✅"); // testing
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".heart-btn").forEach((btn) => {
@@ -8,14 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const icon = btn.querySelector("i");
       if (!icon) return;
 
-      // Toggle solid/regular
       const isRegular = icon.classList.contains("fa-regular");
 
       icon.classList.toggle("fa-regular", !isRegular);
       icon.classList.toggle("fa-solid", isRegular);
-
-      // Color (optional)
       icon.style.color = isRegular ? "red" : "";
     });
   });
+
+  //  NAV TOGGLE
+  const navBtn = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (navBtn && navLinks) {
+    navBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      navBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 });

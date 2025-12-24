@@ -37,7 +37,6 @@ body {
     padding: 20px 0 18px;
     background-color: rgb(9, 32, 160);
 }
-
 .nav-wrap {
   max-width: var(--container);
   margin: 0 auto;
@@ -45,9 +44,6 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-
-  /* ✅ FIX: allow dropdown (.nav-links position:absolute) to anchor correctly */
-  position: relative;
 }
 
 /* logo */
@@ -85,7 +81,6 @@ body {
 .nav-logo-link{
     padding: 14px 16px;
 }
-
 .nav-wrap a:not(.nav-logo-link) {
     text-decoration: none;
     padding: 14px 16px;
@@ -120,6 +115,7 @@ body {
   margin: 5px 0;
   border-radius: 2px;
 }
+
 
 /* Headings */
 .page-title {
@@ -217,6 +213,7 @@ body {
   transform: scale(1.2);
 }
 
+
 .icon-btn {
     border: 0;
     background: transparent;
@@ -231,7 +228,6 @@ body {
     width: 18px;
     height: 18px;
 }
-
 .card-title {
     margin: 0 0 8px;
     font-size: 16px;
@@ -291,7 +287,6 @@ body {
     color: #ffffff;
     padding: 60px 20px;
 }
-
 .footer-container {
   max-width: 1200px;
   margin: auto;
@@ -370,7 +365,6 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-
 .footer-social a i {
   font-size: 16px;
 }
@@ -416,7 +410,8 @@ body {
   background: #e7e7e7;
 }
 
-/* Responsive footer */
+
+
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -429,7 +424,8 @@ body {
   }
 }
 
-/* Responsive cards */
+
+
 @media (max-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -446,10 +442,10 @@ body {
   }
 }
 
-/* ✅ Tablet & Mobile */
+
 @media (max-width: 768px) {
   .site-header {
-    position: relative; /* required for dropdown positioning */
+    position: relative; /* ✅ required for dropdown positioning */
   }
 
   .nav-wrap {
@@ -463,14 +459,14 @@ body {
     align-items: flex-end;
   }
 
-  /* ✅ FIX: hide menu links on mobile by default (override desktop flex) */
+  /* dropdown menu */
   .nav-links {
     position: absolute;
     left: 0;
     right: 0;
-    top: 100%;
+    top: 100%; /* ✅ always exactly under header */
     background-color: rgb(9, 32, 160);
-    display: none !important;
+    display: none;
     flex-direction: column;
     align-items: stretch;
     padding: 10px 16px 16px;
@@ -479,7 +475,7 @@ body {
   }
 
   .nav-links.is-open {
-    display: flex !important;
+    display: flex;
   }
 
   .nav-links a {
@@ -492,3 +488,5 @@ body {
     margin-left: 0;
   }
 }
+
+
