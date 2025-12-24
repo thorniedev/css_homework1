@@ -2,40 +2,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Moulpali&display=swap");
 
 :root {
-    --container: 1200px;
-    --border: #1b1b1b;
-    --muted: #7a7a7a;
-    --card-border: #e5e5e5;
-    --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    --radius: 14px;
-  
+  --container: 90%;
+  --border: #1b1b1b;
+  --muted: #7a7a7a;
+  --card-border: #e5e5e5;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+  --radius: 14px;
+  --fonts: "Inter", "Moulpali", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* bg family */
+  --tw-bg-opacity: 1;
+  --bg-color: rgb(37 60 149 / var(--tw-bg-opacity));
+
+  --txt-transform: uppercase;
+  --margin-left-logo: -20px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Inter", "Moulpali", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: #111;
-    background: #fff;
+  margin: 0;
+  font-family: var(--fonts);
+  color: #111;
+  background: #fff;
 }
 
 .container {
-    max-width: var(--container);
-    margin: 0 auto;
-    padding: 24px 16px 40px;
-}
-
-.km {
-    font-family: "Moulpali", serif;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px 16px 40px;
 }
 
 /* Header */
 .site-header {
-    padding: 20px 0 18px;
-    background-color: rgb(9, 32, 160);
+  text-transform: var(--txt-transform);
+  top: 0; 
+  width: 100%;
+  padding: 15px 0 15px;
+  background-color: var(--bg-color);
+  z-index: 10;
+  position: sticky;
 }
 
 .nav-wrap {
@@ -45,14 +52,12 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-
-
   position: relative;
 }
 
 /* logo */
 .nav-logo {
-  height: 60px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -63,7 +68,7 @@ body {
   align-items: center;
   gap: 18px;
   flex: 1;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 
@@ -78,23 +83,22 @@ body {
   gap: 8px;
 }
 
-.nav-logo-link{
-    padding: 14px 16px;
+.nav-logo-link {
+  padding: 2px 0px 5px 0px;
 }
 
 .nav-wrap a:not(.nav-logo-link) {
-    text-decoration: none;
-    padding: 14px 16px;
-    font-size: 19px;
-    font-weight: 700;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .nav-wrap a:not(.nav-logo-link):hover {
-    color: #bd8be9;
-    cursor: pointer;
-    /* margin-top: 5px; */
+  color: #f23c0f;
+  cursor: pointer;
 }
 
 .nav-toggle {
@@ -104,6 +108,10 @@ body {
   border: 0;
   cursor: pointer;
   padding: 10px;
+}
+.nav-toggle i {
+  font-size: 24px;
+  color: #fff;
 }
 
 .nav-toggle .bar {
@@ -117,82 +125,83 @@ body {
 
 /* Headings */
 .page-title {
-    margin: 18px 0 36px;
-    font-size: 28px;
-    font-weight: 700;
+  margin: 18px 0 36px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .section-label {
-    margin: 0 0 16px;
-    letter-spacing: 0.35em;
-    font-weight: 700;
-    font-size: 18px;
+  margin: 0 0 16px;
+  letter-spacing: 0.35em;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 /* Grid */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 /* Card */
 .card {
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    background: #fff;
-    transition: color 0.2s, transform 0.2s;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #fff;
+  transition: color 0.2s, transform 0.2s;
 }
+
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(26, 25, 25, 0.12);
-    transition: all 0.3s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(26, 25, 25, 0.12);
+  transition: all 0.3s ease;
 }
 
 .card-media {
-    height: 160px;
-    background: #f3f3f3;
+  height: 160px;
+  background: #f3f3f3;
 }
 
 .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-body {
-    padding: 12px 14px 12px;
+  padding: 12px 14px 12px;
 }
 
 .card-topline {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .pill {
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .pill--green {
-    background: #e8f6df;
-    color: #2d7a2d;
+  background: #e8f6df;
+  color: #2d7a2d;
 }
 
 .pill--purple {
-    background: #efe4ff;
-    color: #7a2bbf;
+  background: #efe4ff;
+  color: #7a2bbf;
 }
 
 .heart-btn {
@@ -212,78 +221,78 @@ body {
 }
 
 .icon-btn {
-    border: 0;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .card-title {
-    margin: 0 0 8px;
-    font-size: 16px;
-    font-weight: 700;
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .card-desc {
-    margin: 0 0 12px;
-    font-size: 12.5px;
-    color: var(--muted);
-    line-height: 1.35;
-    min-height: 34px;
+  margin: 0 0 12px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.35;
+  min-height: 34px;
 }
 
 /* Rating row */
 .rating {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .stars {
-    font-size: 14px;
-    letter-spacing: 0.08em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
 }
 
 .rating-text {
-    font-size: 12px;
-    color: #333;
+  font-size: 12px;
+  color: #333;
 }
 
 .card-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #ededed;
-    font-size: 12px;
-    color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ededed;
+  font-size: 12px;
+  color: #333;
 }
 
 .meta-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .meta-icon {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /* Footer */
 .site-footer {
-    background: #243c8f;
-    color: #ffffff;
-    padding: 60px 20px;
+  background: #243c8f;
+  color: #ffffff;
+  padding: 60px 20px;
 }
 
 .footer-container {
@@ -322,7 +331,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  line-height: 1.5 ;
+  line-height: 1.5;
 }
 
 .footer-list li {
@@ -415,6 +424,13 @@ body {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .nav-logo {
+    height: 50px;
+    width: auto;
+  }
+  .container {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 520px) {
@@ -443,11 +459,16 @@ body {
 /* Tablet & Mobile */
 @media (max-width: 768px) {
   .site-header {
-    position: relative; /* required for dropdown positioning */
+    position: relative;
+    /* required for dropdown positioning */
   }
 
   .nav-wrap {
     justify-content: space-between;
+  }
+  .nav-logo {
+    height: 40px;
+    width: auto;
   }
 
   /* show hamburger */
@@ -456,6 +477,9 @@ body {
     flex-direction: column;
     align-items: flex-end;
   }
+  .nav-toggle i {
+    font-size: 30px;
+  }
 
   /* hide nav links */
   .nav-links {
@@ -463,7 +487,8 @@ body {
     left: 0;
     right: 0;
     top: 100%;
-    background-color: rgb(9, 32, 160);
+    /* background-color: rgb(9, 32, 160); */
+    background-color: var(--bg-color);
     display: none !important;
     flex-direction: column;
     align-items: stretch;
@@ -479,7 +504,7 @@ body {
   .nav-links a {
     justify-content: flex-start;
     padding: 14px 10px;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .account-header {

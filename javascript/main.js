@@ -1,4 +1,4 @@
-console.log("main.js loaded ✅"); // testing
+console.log("main.js loaded"); // testing
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".heart-btn").forEach((btn) => {
