@@ -36,7 +36,7 @@ body {
 }
 
 /* Header */
-.site-header {
+.header {
   text-transform: var(--txt-transform);
   top: 0; 
   width: 100%;
@@ -61,6 +61,13 @@ body {
   height: 70px;
   width: auto;
   display: block;
+}
+/* Reusable classes */
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
 }
 
 /* links container */
@@ -289,7 +296,7 @@ body {
 }
 
 /* Footer */
-.site-footer {
+.footer {
   background: #243c8f;
   color: #ffffff;
   padding: 60px 20px;
@@ -458,7 +465,7 @@ body {
 
 /* Tablet & Mobile */
 @media (max-width: 768px) {
-  .site-header {
+  .header {
     position: relative;
     /* required for dropdown positioning */
   }
@@ -511,3 +518,13 @@ body {
     margin-left: 0;
   }
 }
+
+
+
+
+
+
+@media (min-width: 768px) {
+  /* layout changes */
+}
+

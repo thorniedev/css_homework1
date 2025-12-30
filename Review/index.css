@@ -1,0 +1,15 @@
+#courses{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    gap: 16px;
+    height: 100vh;
+}
+
+.item {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(186, 40, 40);
+
+}
